@@ -1,94 +1,80 @@
-/* Fuente y colores generales */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #2c3e50;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Contenedor principal */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    flex-grow: 1;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
-/* Encabezado */
-header h1 {
-    font-size: 2.2em;
-    color: #2c3e50;
-    margin-bottom: 20px;
+header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-/* Sección "Sobre mí" */
-.about p {
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #555;
+}
+
+h2 {
+    color: #1a5276;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+p {
     line-height: 1.6;
-    font-size: 1.1em;
-    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
 }
 
-/* Sección de habilidades */
-.skills h2 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.6em;
-    color: #34495e;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 8px;
-    text-align: center;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skills li {
-    font-size: 1.05em;
-    padding: 10px;
-    margin: 8px 0;
-    background: #ecf0f1;
+.skill {
+    background: #3498db;
+    color: white;
+    padding: 12px;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    transition: transform 0.2s ease;
-}
-
-.skills li:hover {
-    transform: translateX(8px);
-    background: #dfe6e9;
-}
-
-.skills span {
-    color: #27ae60;
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-/* Footer */
-footer {
     text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: #ecf0f1;
-    border-top: 4px solid #2980b9;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-footer a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
+.skill:hover {
+    transform: translateY(-5px);
+    background: #2980b9;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.social-links {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.icon {
+    width: 50px;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
 }
